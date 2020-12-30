@@ -1,0 +1,187 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    border: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+/* ICONS */
+.gg-math-plus,
+.gg-math-plus::after {
+    display: block;
+    box-sizing: border-box;
+    background: currentColor;
+    border-radius: 10px
+}
+.iconposition {
+    position: relative;
+    top: 27px;
+    left: 30px;
+}
+.gg-math-plus {
+    margin-top: -2px;
+    position: relative;
+    transform: scale(var(--ggs, 1));
+    width: 20px;
+    height: 2px
+}
+
+.gg-math-plus::after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 20px;
+    top: -9.1px;
+    left: 9px
+}
+
+/* SASS */
+html , body {
+    width: 100%;
+    height: 100%;
+    #app {
+        width: 100%;
+        height: 100%;
+        .background {
+            width: 100%;
+            height: 100vh;
+            video {
+                position: fixed;
+                overflow: hidden;
+                z-index: -1;
+                opacity: 0.5;
+            }
+            nav {
+                width: 100%;
+                height: 90px;
+                background: transparent;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                h1 {
+                    margin-bottom: 5px;
+                }
+            }
+        }
+        .todo {
+            margin-top: 2%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            .todo-input {
+                font-size: 1.4rem;
+                padding: 8px 0px 8px 40px;
+                width: 95%;
+                outline: none;
+                background: transparent;
+                border-bottom: 2px solid black;
+                transition: 250ms all;
+                border-radius: 5px;
+                &::placeholder {
+                    color: black;
+                }
+                &:focus {
+                    box-shadow: gray 0px 0px 10px;
+                    background: whitesmoke;
+                }
+            }
+        }
+    }
+}
+.b-div {
+    margin: 10px 0px 0px -15px;
+    width: 87%;
+}
+.list {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    overflow: auto;
+    .card {
+        font-size: 1.2rem;
+        padding: 12px 0px 15px 20px;
+        width: 98.5%;
+        outline: none;
+        background: whitesmoke;
+        margin-bottom: 5px;
+        transition: 250ms all;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        input {
+            &:hover {
+                cursor: pointer;
+            }
+            &:checked + span {
+                text-decoration: line-through;
+                color: gray;
+            }
+        }
+        span { margin-left: 10px; transition: 300ms all; &:hover { cursor: pointer; } }
+    }
+}
+.message {
+    width: 100%;
+    height: 330px;
+    display: flex;
+    flex-direction: column;
+    border-top: 4px solid black;
+    border-radius: 5px;
+    padding: 12px 15px 0px 15px;
+    background: whitesmoke;
+    h2 , h3{
+        margin-bottom: 8px;
+    }
+    ul {
+        margin-left: 2%;
+        li {
+            list-style: circle;
+        }
+    }
+    span {
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+
+    button {
+        width: 70px;
+        border: 2px solid transparent;
+        background: transparent;
+        font-size: 16px;
+        font-weight: bold;
+        transition: 250ms all;
+        border-radius: 5px;
+        padding: 5px;
+        position: absolute;
+        right: 0;
+        outline: none;
+        &:hover {
+            cursor: pointer;
+            border: 2px solid black;
+        }
+    }
+}
+
+$medium: 600px;
+$small: 300px;
+
+@media only screen and(max-width: $medium) {
+    .b-div {
+        margin: 10px 0px 0px 10px;
+    }
+    .message {
+        height: 420px;
+        ul {
+            margin-left: 20px;
+        }
+    }
+}
