@@ -3,7 +3,7 @@
 What I used?
 - HTML5 & CSS3
 - Javascript
-- CDN Vue
+- Vue.js CDN
 - Web Components
 - Sass/Scss
 - LocalStorage
