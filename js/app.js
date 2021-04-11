@@ -92,36 +92,6 @@ Vue.component('bekleyenler', {
     </div>`,
 
 })
-Vue.component('bilgilendirme', {
-    methods: {
-        exitMessage(e) {
-            localStorage.setItem('message', true);
-            e.target.parentElement.parentElement.remove();
-        }
-    },
-    props: {
-        msg: {type: Boolean}
-    },
-    template: `
-    <div style="display:flex; justify-content:center;" v-if="!msg">
-        <div class="message">
-            <button @click="exitMessage">Kapat</button>
-            <h2>Uygulama ön bilgilendirme</h2>
-            <span>Günlük işlerinizin veya görevlerinizin takibini yapabilmek için kullanabileceğiniz modern tasarımlı bir uygulama.</span>
-            <span>Ayrıca LocalStorage sayesinde veritabanı olmadan verilerinizi kayıt ediliyor bu sayede sayfayı yenilediğinizde her şey bıraktığınız gibi kalıyor.</span>
-            <h3>Bu uygulamada kullanılan teknolojiler</h3>
-            <ul>
-                <li>HTML5 & CSS3</li>
-                <li>Javascript</li>
-                <li>Vue.js</li>
-                <li>Web Components</li>
-                <li>Sass/Scss</li>
-                <li>LocalStorage</li>
-            </ul>
-        </div>
-    </div>
-    `,
-})
 Vue.component('application', {
     methods: {
         getMessage() {
