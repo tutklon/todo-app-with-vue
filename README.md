@@ -1,4 +1,4 @@
-## Simple Todo Application for my homework 
+## Simple Todo Application
 
 What I used?
 - HTML5 & CSS3
